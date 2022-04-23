@@ -3,15 +3,22 @@ package net.saltayjek004.stepsmod.block.custom;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.block.enums.StairShape;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 import java.util.stream.IntStream;
 
@@ -38,18 +45,18 @@ public class ModStepsBlock extends Block {
     }
 
     private static VoxelShape composeShape(int i, VoxelShape northWest, VoxelShape northEast, VoxelShape southWest, VoxelShape southEast) {
-        VoxelShape voxelShape = null;
+        VoxelShape voxelShape = Block.createCuboidShape(0.0,0.0,0.0,0.0,0.0,0.0);
         if ((i & 1) != 0) {
-            voxelShape = northWest;
+            voxelShape = VoxelShapes.union(voxelShape, northWest);
         }
         if ((i & 2) != 0) {
-            voxelShape = northEast;
+            voxelShape = VoxelShapes.union(voxelShape, northEast);
         }
         if ((i & 4) != 0) {
-            voxelShape = southWest;
+            voxelShape = VoxelShapes.union(voxelShape, southWest);
         }
         if ((i & 8) != 0) {
-            voxelShape = southEast;
+            voxelShape = VoxelShapes.union(voxelShape, southEast);
         }
         return voxelShape;
     }
@@ -85,5 +92,110 @@ public class ModStepsBlock extends Block {
             return;
         }
         this.baseBlockState.onStateReplaced(world, pos, newState, moved);
+    }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        Direction direction = ctx.getSide();
+        BlockPos blockPos = ctx.getBlockPos();
+        BlockState blockState = (BlockState)((BlockState)((BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing())).with(HALF, direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double)blockPos.getY() > 0.5 ? BlockHalf.TOP : BlockHalf.BOTTOM));
+        return (BlockState)blockState.with(SHAPE, ModStepsBlock.getStepShape(blockState, ctx.getWorld(), blockPos));
+    }
+
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+
+        if (direction.getAxis().isHorizontal()) {
+            return (BlockState)state.with(SHAPE, ModStepsBlock.getStepShape(state, world, pos));
+        }
+        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+
+    private static StairShape getStepShape(BlockState state, BlockView world, BlockPos pos) {
+        Direction direction3;
+        Direction direction2;
+        Direction direction = state.get(FACING);
+        BlockState blockState = world.getBlockState(pos.offset(direction));
+        if (ModStepsBlock.isSteps(blockState) && state.get(HALF) == blockState.get(HALF) && (direction2 = blockState.get(FACING)).getAxis() != state.get(FACING).getAxis() && ModStepsBlock.isDifferentOrientation(state, world, pos, direction2.getOpposite())) {
+            if (direction2 == direction.rotateYCounterclockwise()) {
+                return StairShape.OUTER_LEFT;
+            }
+            return StairShape.OUTER_RIGHT;
+        }
+        BlockState blockState2 = world.getBlockState(pos.offset(direction.getOpposite()));
+        if (ModStepsBlock.isSteps(blockState2) && state.get(HALF) == blockState2.get(HALF) && (direction3 = blockState2.get(FACING)).getAxis() != state.get(FACING).getAxis() && ModStepsBlock.isDifferentOrientation(state, world, pos, direction3)) {
+            if (direction3 == direction.rotateYCounterclockwise()) {
+                return StairShape.INNER_LEFT;
+            }
+            return StairShape.INNER_RIGHT;
+        }
+        return StairShape.STRAIGHT;
+    }
+
+    private static boolean isDifferentOrientation(BlockState state, BlockView world, BlockPos pos, Direction dir) {
+        BlockState blockState = world.getBlockState(pos.offset(dir));
+        return !ModStepsBlock.isSteps(blockState) || blockState.get(FACING) != state.get(FACING) || blockState.get(HALF) != state.get(HALF);
+    }
+
+    public static boolean isSteps(BlockState state) {
+        return state.getBlock() instanceof ModStepsBlock;
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        return (BlockState)state.with(FACING, rotation.rotate(state.get(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        Direction direction = state.get(FACING);
+        StairShape stepShape = state.get(SHAPE);
+        switch (mirror) {
+            case LEFT_RIGHT: {
+                if (direction.getAxis() != Direction.Axis.Z) break;
+                switch (stepShape) {
+                    case INNER_LEFT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.INNER_RIGHT);
+                    }
+                    case INNER_RIGHT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.INNER_LEFT);
+                    }
+                    case OUTER_LEFT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.OUTER_RIGHT);
+                    }
+                    case OUTER_RIGHT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.OUTER_LEFT);
+                    }
+                }
+                return state.rotate(BlockRotation.CLOCKWISE_180);
+            }
+            case FRONT_BACK: {
+                if (direction.getAxis() != Direction.Axis.X) break;
+                switch (stepShape) {
+                    case INNER_LEFT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.INNER_LEFT);
+                    }
+                    case INNER_RIGHT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.INNER_RIGHT);
+                    }
+                    case OUTER_LEFT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.OUTER_RIGHT);
+                    }
+                    case OUTER_RIGHT: {
+                        return (BlockState)state.rotate(BlockRotation.CLOCKWISE_180).with(SHAPE, StairShape.OUTER_LEFT);
+                    }
+                    case STRAIGHT: {
+                        return state.rotate(BlockRotation.CLOCKWISE_180);
+                    }
+                }
+                break;
+            }
+        }
+        return super.mirror(state, mirror);
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING, HALF, SHAPE);
     }
 }

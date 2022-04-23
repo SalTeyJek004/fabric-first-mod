@@ -17,7 +17,7 @@ import net.saltayjek004.stepsmod.item.ModItemGroup;
 public class ModBlocks {
 
     public static final Block OAK_STEPS = registerBlock("oak_steps",
-        new ModStepsBlock(Blocks.OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).nonOpaque()), ModItemGroup.STEPS);
+        new ModStepsBlock(Blocks.OAK_STAIRS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).nonOpaque()), ModItemGroup.STEPS);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

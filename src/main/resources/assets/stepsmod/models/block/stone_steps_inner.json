@@ -1,0 +1,8 @@
+{
+  "parent": "stepsmod:block/steps_inner",
+  "textures": {
+    "bottom": "minecraft:block/stone",
+    "top": "minecraft:block/stone",
+    "side": "minecraft:block/stone"
+  }
+}

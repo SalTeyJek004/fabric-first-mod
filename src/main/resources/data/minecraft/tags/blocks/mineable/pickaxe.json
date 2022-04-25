@@ -1,6 +1,15 @@
 {
   "replace": false,
   "values": [
-    "stepsmod:cobblestone_steps"
+    "stepsmod:cobblestone_steps",
+    "stepsmod:mossy_cobblestone_steps",
+    "stepsmod:andesite_steps",
+    "stepsmod:polished_andesite_steps",
+    "stepsmod:diorite_steps",
+    "stepsmod:polished_diorite_steps",
+    "stepsmod:granite_steps",
+    "stepsmod:polished_granite_steps",
+    "stepsmod:stone_brick_steps",
+    "stepsmod:mossy_stone_brick_steps"
   ]
 }

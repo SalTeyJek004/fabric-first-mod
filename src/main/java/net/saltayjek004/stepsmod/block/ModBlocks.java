@@ -38,6 +38,29 @@ public class ModBlocks {
     public static final Block COBBLESTONE_STEPS = registerBlock("cobblestone_steps",
         new ModStepsBlock(Blocks.COBBLESTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
 
+    //Stone variants
+    public static final Block STONE_STEPS = registerBlock("stone_steps",
+            new ModStepsBlock(Blocks.STONE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block GRANITE_STEPS = registerBlock("granite_steps",
+            new ModStepsBlock(Blocks.GRANITE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block POLISHED_GRANITE_STEPS = registerBlock("polished_granite_steps",
+            new ModStepsBlock(Blocks.POLISHED_GRANITE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block DIORITE_STEPS = registerBlock("diorite_steps",
+            new ModStepsBlock(Blocks.DIORITE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block POLISHED_DIORITE_STEPS = registerBlock("polished_diorite_steps",
+            new ModStepsBlock(Blocks.POLISHED_DIORITE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block ANDESITE_STEPS = registerBlock("andesite_steps",
+            new ModStepsBlock(Blocks.ANDESITE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block POLISHED_ANDESITE_STEPS = registerBlock("polished_andesite_steps",
+            new ModStepsBlock(Blocks.POLISHED_ANDESITE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block MOSSY_COBBLESTONE_STEPS = registerBlock("mossy_cobblestone_steps",
+            new ModStepsBlock(Blocks.MOSSY_COBBLESTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block STONE_BRICK_STEPS = registerBlock("stone_brick_steps",
+            new ModStepsBlock(Blocks.STONE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block MOSSY_STONE_BRICK_STEPS = registerBlock("mossy_stone_brick_steps",
+            new ModStepsBlock(Blocks.MOSSY_STONE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+
+
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(StepsMod.MOD_ID, name), block);

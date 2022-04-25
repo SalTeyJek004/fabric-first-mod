@@ -5,9 +5,7 @@ def ReplaceJson(filename,to_replace,new_word,suffix):
         print("File opened")
         out_file = open(filename.replace(filename,new_word+suffix+".json"),"wt")
         for line in in_file:
-            temp = line.replace(to_replace,new_word)
-            temp = temp.replace("_planks_planks","_planks")
-            out_file.write(temp)
+            out_file.write(line.replace(to_replace,new_word+suffix))
         in_file.close()
         out_file.close()
     except IOError:
@@ -18,9 +16,12 @@ def ReplaceJson(filename,to_replace,new_word,suffix):
 woodVariants = ["spruce_planks","birch_planks","jungle_planks","acacia_planks"\
                 ,"dark_oak_planks","crimson_planks","warped_planks"]
 
+stoneVariants = ["stone","granite","polished_granite","diorite","polished_diorite"\
+    ,"andesite","polished_andesite","mossy_cobblestone","stone_brick","mossy_stone_brick"]
 
-for wood in woodVariants:
-    ReplaceJson("oak_steps","oak",wood,"_steps")
+
+for stone in stoneVariants:
+    ReplaceJson("cobblestone_steps","cobblestone_steps",stone,"_steps")
 
     
 

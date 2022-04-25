@@ -9,5 +9,16 @@
   "block.stepsmod.birch_planks_steps": "Birch Planks Steps",
   "block.stepsmod.spruce_planks_steps": "Spruce Planks Steps",
 
+  "block.stepsmod.mossy_stone_brick_steps": "Mossy Stone Brick Steps",
+  "block.stepsmod.stone_brick_steps": "Stone Brick Steps",
+  "block.stepsmod.mossy_cobblestone_steps": "Mossy Cobblestone Steps",
+  "block.stepsmod.polished_andesite_steps": "Polished Andesite Steps",
+  "block.stepsmod.andesite_steps": "Andesite Steps",
+  "block.stepsmod.polished_diorite_steps": "Polished Diorite Steps",
+  "block.stepsmod.diorite_steps": "Diorite Steps",
+  "block.stepsmod.polished_granite_steps": "Polished Granite Steps",
+  "block.stepsmod.granite_steps": "Granite Steps",
+  "block.stepsmod.stone_steps": "Stone Steps",
+
   "itemGroup.stepsmod.steps": "SalTay's steps"
 }

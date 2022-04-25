@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:jungle_planks"
+      "item": "minecraft:spruce_planks"
     }
   },
   "result": {
-    "item": "stepsmod:jungle_planks_steps"
+    "item": "stepsmod:spruce_steps"
   }
 }

@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:dark_oak_planks"
+      "item": "minecraft:crimson_planks"
     }
   },
   "result": {
-    "item": "stepsmod:dark_oak_planks_steps"
+    "item": "stepsmod:crimson_steps"
   }
 }

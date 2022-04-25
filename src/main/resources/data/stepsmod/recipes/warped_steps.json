@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:birch_planks"
+      "item": "minecraft:warped_planks"
     }
   },
   "result": {
-    "item": "stepsmod:birch_planks_steps"
+    "item": "stepsmod:warped_steps"
   }
 }

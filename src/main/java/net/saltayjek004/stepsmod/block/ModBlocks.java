@@ -20,19 +20,19 @@ public class ModBlocks {
         new ModStepsBlock(Blocks.OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
 
     //Wood variants
-    public static final Block SPRUCE_PLANKS_STEPS = registerBlock("spruce_planks_steps",
+    public static final Block SPRUCE_STEPS = registerBlock("spruce_steps",
             new ModStepsBlock(Blocks.SPRUCE_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
-    public static final Block BIRCH_PLANKS_STEPS = registerBlock("birch_planks_steps",
+    public static final Block BIRCH_STEPS = registerBlock("birch_steps",
             new ModStepsBlock(Blocks.BIRCH_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
-    public static final Block JUNGLE_PLANKS_STEPS = registerBlock("jungle_planks_steps",
+    public static final Block JUNGLE_STEPS = registerBlock("jungle_steps",
             new ModStepsBlock(Blocks.JUNGLE_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
-    public static final Block ACACIA_PLANKS_STEPS = registerBlock("acacia_planks_steps",
+    public static final Block ACACIA_STEPS = registerBlock("acacia_steps",
             new ModStepsBlock(Blocks.ACACIA_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
-    public static final Block DARK_OAK_PLANKS_STEPS = registerBlock("dark_oak_planks_steps",
+    public static final Block DARK_OAK_STEPS = registerBlock("dark_oak_steps",
             new ModStepsBlock(Blocks.DARK_OAK_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
-    public static final Block CRIMSON_PLANKS_STEPS = registerBlock("crimson_planks_steps",
+    public static final Block CRIMSON_STEPS = registerBlock("crimson_steps",
             new ModStepsBlock(Blocks.CRIMSON_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
-    public static final Block WARPED_PLANKS_STEPS = registerBlock("warped_planks_steps",
+    public static final Block WARPED_STEPS = registerBlock("warped_steps",
             new ModStepsBlock(Blocks.WARPED_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)), ModItemGroup.STEPS);
 
     public static final Block COBBLESTONE_STEPS = registerBlock("cobblestone_steps",

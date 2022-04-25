@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "stepsmod:dark_oak_planks_steps"
+          "name": "stepsmod:jungle_steps"
         }
       ],
       "conditions": [

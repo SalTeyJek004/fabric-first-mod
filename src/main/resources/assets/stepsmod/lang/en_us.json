@@ -1,13 +1,13 @@
 {
-  "block.stepsmod.oak_steps": "Oak steps",
-  "block.stepsmod.cobblestone_steps": "Cobblestone steps",
-  "block.stepsmod.warped_planks_steps": "Warped Planks Steps",
-  "block.stepsmod.crimson_planks_steps": "Crimson Planks Steps",
-  "block.stepsmod.dark_oak_planks_steps": "Dark Oak Planks Steps",
-  "block.stepsmod.acacia_planks_steps": "Acacia Planks Steps",
-  "block.stepsmod.jungle_planks_steps": "Jungle Planks Steps",
-  "block.stepsmod.birch_planks_steps": "Birch Planks Steps",
-  "block.stepsmod.spruce_planks_steps": "Spruce Planks Steps",
+  "block.stepsmod.oak_steps": "Oak Steps",
+  "block.stepsmod.cobblestone_steps": "Cobblestone Steps",
+  "block.stepsmod.warped_steps": "Warped Steps",
+  "block.stepsmod.crimson_steps": "Crimson Steps",
+  "block.stepsmod.dark_oak_steps": "Dark Oak Steps",
+  "block.stepsmod.acacia_steps": "Acacia Steps",
+  "block.stepsmod.jungle_steps": "Jungle Steps",
+  "block.stepsmod.birch_steps": "Birch Steps",
+  "block.stepsmod.spruce_steps": "Spruce Steps",
 
   "itemGroup.stepsmod.steps": "SalTay's steps"
 }

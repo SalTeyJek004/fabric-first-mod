@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "stepsmod:spruce_planks_steps"
+          "name": "stepsmod:birch_steps"
         }
       ],
       "conditions": [

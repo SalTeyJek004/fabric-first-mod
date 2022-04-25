@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "stepsmod:acacia_planks_steps"
+          "name": "stepsmod:dark_oak_steps"
         }
       ],
       "conditions": [

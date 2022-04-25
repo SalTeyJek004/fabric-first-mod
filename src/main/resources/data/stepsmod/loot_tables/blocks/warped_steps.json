@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "stepsmod:warped_planks_steps"
+          "name": "stepsmod:warped_steps"
         }
       ],
       "conditions": [

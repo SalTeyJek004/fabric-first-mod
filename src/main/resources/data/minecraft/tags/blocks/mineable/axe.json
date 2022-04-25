@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-    "stepsmod:oak_steps"
+    "stepsmod:oak_steps",
+    "stepsmod:acacia_planks_steps",
+    "stepsmod:birch_planks_steps",
+    "stepsmod:crimson_planks_steps",
+    "stepsmod:dark_oak_planks_steps",
+    "stepsmod:jungle_planks_steps",
+    "stepsmod:spruce_planks_steps",
+    "stepsmod:warped_planks_steps"
   ]
 }

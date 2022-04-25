@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:jungle_planks"
+    }
+  },
+  "result": {
+    "item": "stepsmod:jungle_planks_steps"
+  }
+}

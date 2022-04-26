@@ -63,23 +63,22 @@ public class ModBlocks {
     //cut copper steps
     public static final Block CUT_COPPER_STEPS = registerBlock("cut_copper_steps",
             new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.UNAFFECTED, Blocks.CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-    public static final Block EXPOSED_CUT_COPPER_STEPS = registerBlock("exposed_copper_steps",
+    public static final Block EXPOSED_CUT_COPPER_STEPS = registerBlock("exposed_cut_copper_steps",
             new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.EXPOSED, Blocks.EXPOSED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-    public static final Block WEATHERED_CUT_COPPER_STEPS = registerBlock("weathered_copper_steps",
+    public static final Block WEATHERED_CUT_COPPER_STEPS = registerBlock("weathered_cut_copper_steps",
             new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.WEATHERED, Blocks.WEATHERED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-    public static final Block OXIDIZED_CUT_COPPER_STEPS = registerBlock("oxidized_copper_steps",
+    public static final Block OXIDIZED_CUT_COPPER_STEPS = registerBlock("oxidized_cut_copper_steps",
             new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.OXIDIZED, Blocks.OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
 
     //waxed cut copper steps
     public static final Block WAXED_CUT_COPPER_STEPS = registerBlock("waxed_cut_copper_steps",
             new ModStepsBlock(Blocks.WAXED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-    public static final Block WAXED_EXPOSED_CUT_COPPER_STEPS = registerBlock("waxed_exposed_copper_steps",
+    public static final Block WAXED_EXPOSED_CUT_COPPER_STEPS = registerBlock("waxed_exposed_cut_copper_steps",
             new ModStepsBlock(Blocks.WAXED_EXPOSED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-    public static final Block WAXED_WEATHERED_CUT_COPPER_STEPS = registerBlock("waxed_weathered_copper_steps",
+    public static final Block WAXED_WEATHERED_CUT_COPPER_STEPS = registerBlock("waxed_weathered_cut_copper_steps",
             new ModStepsBlock(Blocks.WAXED_WEATHERED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-    public static final Block WAXED_OXIDIZED_CUT_COPPER_STEPS = registerBlock("waxed_oxidized_copper_steps",
+    public static final Block WAXED_OXIDIZED_CUT_COPPER_STEPS = registerBlock("waxed_oxidized_cut_copper_steps",
             new ModStepsBlock(Blocks.WAXED_OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
-
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

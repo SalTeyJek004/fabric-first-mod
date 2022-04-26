@@ -20,5 +20,14 @@
   "block.stepsmod.granite_steps": "Granite Steps",
   "block.stepsmod.stone_steps": "Stone Steps",
 
+  "block.stepsmod.waxed_oxidized_cut_copper_steps": "Waxed Oxidized Cut Copper Steps",
+  "block.stepsmod.waxed_weathered_cut_copper_steps": "Waxed Weathered Cut Copper Steps",
+  "block.stepsmod.waxed_exposed_cut_copper_steps": "Waxed Exposed Cut Copper Steps",
+  "block.stepsmod.waxed_cut_copper_steps": "Waxed Cut Copper Steps",
+  "block.stepsmod.oxidized_cut_copper_steps": "Oxidized Cut Copper Steps",
+  "block.stepsmod.weathered_cut_copper_steps": "Weathered Cut Copper Steps",
+  "block.stepsmod.exposed_cut_copper_steps": "Exposed Cut Copper Steps",
+  "block.stepsmod.cut_copper_steps": "Cut Copper Steps",
+
   "itemGroup.stepsmod.steps": "SalTay's steps"
 }

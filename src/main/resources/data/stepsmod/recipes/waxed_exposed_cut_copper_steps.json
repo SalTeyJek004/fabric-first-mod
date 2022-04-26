@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:waxed_exposed_cut_copper"
+    }
+  },
+  "result": {
+    "item": "stepsmod:waxed_exposed_cut_copper_steps"
+  }
+}

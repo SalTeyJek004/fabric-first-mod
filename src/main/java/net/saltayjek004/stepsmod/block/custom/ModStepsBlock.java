@@ -160,7 +160,8 @@ public class ModStepsBlock extends Block implements Waterloggable {
         Direction direction = ctx.getSide();
         BlockPos blockPos = ctx.getBlockPos();
         BlockState blockState = (BlockState)((BlockState)((BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing())).with(HALF, direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double)blockPos.getY() > 0.5 ? BlockHalf.TOP : BlockHalf.BOTTOM));
-        return (BlockState)blockState.with(SHAPE, ModStepsBlock.getStepShape(blockState, ctx.getWorld(), blockPos));
+        return (BlockState)blockState.with(SHAPE, ModStepsBlock.getStepShape(blockState, ctx.getWorld(), blockPos))
+                .with(WATERLOGGED,ctx.getWorld().getFluidState(ctx.getBlockPos()).getFluid() == Fluids.WATER);
     }
 
     @Override
@@ -168,6 +169,9 @@ public class ModStepsBlock extends Block implements Waterloggable {
 
         if (direction.getAxis().isHorizontal()) {
             return (BlockState)state.with(SHAPE, ModStepsBlock.getStepShape(state, world, pos));
+        }
+        if (state.get(WATERLOGGED)){
+            world.createAndScheduleFluidTick(pos,Fluids.WATER,Fluids.WATER.getTickRate(world));
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }

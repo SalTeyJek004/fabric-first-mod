@@ -15,8 +15,10 @@ public class ModOxidizableStepsBlock extends ModStepsBlock implements Oxidizable
         this.oxidationLevel = oxidationLevel;
     }
 
+    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         this.tickDegradation(state, world, pos, random);
+        super.randomTick(state,world,pos,random);
     }
 
     public boolean hasRandomTicks(BlockState state) {

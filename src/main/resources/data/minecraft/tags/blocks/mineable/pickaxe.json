@@ -19,6 +19,14 @@
     "stepsmod:waxed_cut_copper_steps",
     "stepsmod:waxed_exposed_cut_copper_steps",
     "stepsmod:waxed_weathered_cut_copper_steps",
-    "stepsmod:waxed_oxidized_cut_copper_steps"
+    "stepsmod:waxed_oxidized_cut_copper_steps",
+
+    "stepsmod:cobbled_deepslate_steps",
+    "stepsmod:polished_deepslate_steps",
+    "stepsmod:deepslate_brick_steps",
+    "stepsmod:deepslate_tile_steps",
+    "stepsmod:blackstone_steps",
+    "stepsmod:polished_blackstone_steps",
+    "stepsmod:polished_blackstone_brick_steps"
   ]
 }

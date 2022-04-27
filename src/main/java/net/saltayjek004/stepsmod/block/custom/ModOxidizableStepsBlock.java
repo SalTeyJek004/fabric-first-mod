@@ -1,13 +1,12 @@
 package net.saltayjek004.stepsmod.block.custom;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Oxidizable;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-public class ModOxidizableStepsBlock extends ModStepsBlock implements Oxidizable {
+public class ModOxidizableStepsBlock extends ModStepsBlock implements ModOxidizable {
     private final OxidationLevel oxidationLevel;
 
     public ModOxidizableStepsBlock(OxidationLevel oxidationLevel, BlockState baseBlockState, Settings settings) {
@@ -22,7 +21,7 @@ public class ModOxidizableStepsBlock extends ModStepsBlock implements Oxidizable
     }
 
     public boolean hasRandomTicks(BlockState state) {
-        return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
+        return ModOxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
 
     public OxidationLevel getDegradationLevel() {

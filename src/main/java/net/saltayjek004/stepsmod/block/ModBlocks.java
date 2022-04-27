@@ -12,6 +12,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.saltayjek004.stepsmod.StepsMod;
+import net.saltayjek004.stepsmod.block.custom.ModOxidizable;
 import net.saltayjek004.stepsmod.block.custom.ModOxidizableStepsBlock;
 import net.saltayjek004.stepsmod.block.custom.ModStepsBlock;
 import net.saltayjek004.stepsmod.item.ModItemGroup;
@@ -62,13 +63,13 @@ public class ModBlocks {
 
     //cut copper steps
     public static final Block CUT_COPPER_STEPS = registerBlock("cut_copper_steps",
-            new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.UNAFFECTED, Blocks.CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
+            new ModOxidizableStepsBlock(ModOxidizable.OxidationLevel.UNAFFECTED, Blocks.CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
     public static final Block EXPOSED_CUT_COPPER_STEPS = registerBlock("exposed_cut_copper_steps",
-            new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.EXPOSED, Blocks.EXPOSED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
+            new ModOxidizableStepsBlock(ModOxidizable.OxidationLevel.EXPOSED, Blocks.EXPOSED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
     public static final Block WEATHERED_CUT_COPPER_STEPS = registerBlock("weathered_cut_copper_steps",
-            new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.WEATHERED, Blocks.WEATHERED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
+            new ModOxidizableStepsBlock(ModOxidizable.OxidationLevel.WEATHERED, Blocks.WEATHERED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
     public static final Block OXIDIZED_CUT_COPPER_STEPS = registerBlock("oxidized_cut_copper_steps",
-            new ModOxidizableStepsBlock(Oxidizable.OxidationLevel.OXIDIZED, Blocks.OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
+            new ModOxidizableStepsBlock(ModOxidizable.OxidationLevel.OXIDIZED, Blocks.OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
 
     //waxed cut copper steps
     public static final Block WAXED_CUT_COPPER_STEPS = registerBlock("waxed_cut_copper_steps",

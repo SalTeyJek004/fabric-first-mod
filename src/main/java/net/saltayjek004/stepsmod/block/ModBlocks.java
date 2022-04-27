@@ -81,6 +81,23 @@ public class ModBlocks {
     public static final Block WAXED_OXIDIZED_CUT_COPPER_STEPS = registerBlock("waxed_oxidized_cut_copper_steps",
             new ModStepsBlock(Blocks.WAXED_OXIDIZED_CUT_COPPER.getDefaultState(), FabricBlockSettings.of(Material.METAL)), ModItemGroup.STEPS);
 
+    //dark stone variants
+    public static final Block COBBLED_DEEPSLATE_STEPS = registerBlock("cobbled_deepslate_steps",
+            new ModStepsBlock(Blocks.COBBLED_DEEPSLATE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block POLISHED_DEEPSLATE_STEPS = registerBlock("polished_deepslate_steps",
+            new ModStepsBlock(Blocks.POLISHED_DEEPSLATE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block DEEPSLATE_BRICK_STEPS = registerBlock("deepslate_brick_steps",
+            new ModStepsBlock(Blocks.DEEPSLATE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block DEEPSLATE_TILE_STEPS = registerBlock("deepslate_tile_steps",
+            new ModStepsBlock(Blocks.DEEPSLATE_TILES.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block BLACKSTONE_STEPS = registerBlock("blackstone_steps",
+            new ModStepsBlock(Blocks.BLACKSTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block POLISHED_BLACKSTONE_STEPS = registerBlock("polished_blackstone_steps",
+            new ModStepsBlock(Blocks.POLISHED_BLACKSTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+    public static final Block POLISHED_BLACKSTONE_BRICK_STEPS = registerBlock("polished_blackstone_brick_steps",
+            new ModStepsBlock(Blocks.POLISHED_BLACKSTONE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE)), ModItemGroup.STEPS);
+
+
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(StepsMod.MOD_ID, name), block);

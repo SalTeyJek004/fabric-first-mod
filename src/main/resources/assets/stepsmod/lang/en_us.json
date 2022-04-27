@@ -29,5 +29,13 @@
   "block.stepsmod.exposed_cut_copper_steps": "Exposed Cut Copper Steps",
   "block.stepsmod.cut_copper_steps": "Cut Copper Steps",
 
+  "block.stepsmod.polished_blackstone_brick_steps": "Polished Blackstone Brick Steps",
+  "block.stepsmod.polished_blackstone_steps": "Polished Blackstone Steps",
+  "block.stepsmod.blackstone_steps": "Blackstone Steps",
+  "block.stepsmod.deepslate_tile_steps": "Deepslate Tile Steps",
+  "block.stepsmod.deepslate_brick_steps": "Deepslate Brick Steps",
+  "block.stepsmod.polished_deepslate_steps": "Polished Deepslate Steps",
+  "block.stepsmod.cobbled_deepslate_steps": "Cobbled Deepslate Steps",
+
   "itemGroup.stepsmod.steps": "SalTay's steps"
 }

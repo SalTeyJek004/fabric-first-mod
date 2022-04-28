@@ -27,6 +27,21 @@
     "stepsmod:deepslate_tile_steps",
     "stepsmod:blackstone_steps",
     "stepsmod:polished_blackstone_steps",
-    "stepsmod:polished_blackstone_brick_steps"
+    "stepsmod:polished_blackstone_brick_steps",
+
+    "stepsmod:purpur_steps",
+    "stepsmod:brick_steps",
+    "stepsmod:nether_brick_steps",
+    "stepsmod:red_nether_brick_steps",
+    "stepsmod:sandstone_steps",
+    "stepsmod:smooth_sandstone_steps",
+    "stepsmod:red_sandstone_steps",
+    "stepsmod:smooth_red_sandstone_steps",
+    "stepsmod:quartz_steps",
+    "stepsmod:smooth_quartz_steps",
+    "stepsmod:prismarine_steps",
+    "stepsmod:prismarine_brick_steps",
+    "stepsmod:dark_prismarine_steps",
+    "stepsmod:endstone_brick_steps"
   ]
 }

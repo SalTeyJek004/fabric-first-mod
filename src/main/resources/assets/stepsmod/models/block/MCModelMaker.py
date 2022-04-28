@@ -29,7 +29,7 @@ extraVariants = ["purpur","brick","nether_brick","red_nether_brick","sandstone",
     ,"smooth_quartz","prismarine","prismarine_brick","dark_prismarine","endstone_brick",]
 
 
-for v in darkVariants:
+for v in extraVariants:
     ReplaceJson("cobblestone_steps",v+"_steps","cobblestone",v)
     ReplaceJson("cobblestone_steps_outer",v+"_steps_outer","cobblestone",v)
     ReplaceJson("cobblestone_steps_inner",v+"_steps_inner","cobblestone",v)

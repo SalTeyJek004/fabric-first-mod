@@ -51,5 +51,20 @@ public class StepsClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POLISHED_BLACKSTONE_STEPS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POLISHED_BLACKSTONE_BRICK_STEPS, RenderLayer.getCutout());
 
+        //Misc Variants
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BRICK_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ENDSTONE_BRICK_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PRISMARINE_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_PRISMARINE_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PRISMARINE_BRICK_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SANDSTONE_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMOOTH_SANDSTONE_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_SANDSTONE_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMOOTH_RED_SANDSTONE_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.QUARTZ_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SMOOTH_QUARTZ_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NETHER_BRICK_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_NETHER_BRICK_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PURPUR_STEPS, RenderLayer.getCutout());
     }
 }

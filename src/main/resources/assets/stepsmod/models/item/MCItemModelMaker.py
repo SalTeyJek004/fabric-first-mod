@@ -26,9 +26,9 @@ darkVariants = ["cobbled_deepslate","polished_deepslate","deepslate_brick","deep
     ,"polished_blackstone_brick"]
 
 extraVariants = ["purpur","brick","nether_brick","red_nether_brick","sandstone","smooth_sandstone","red_sandstone","smooth_red_sandstone","quartz"\
-    ,"smooth_quartz","prismarine","prismarine_brick","dark_prismarine","endstone_brick",]
+    ,"smooth_quartz","prismarine","prismarine_brick","dark_prismarine","endstone_brick"]
 
-for v in darkVariants:
+for v in extraVariants:
     ReplaceJson("cobblestone_steps","cobblestone_steps",v+"_steps")
 
     

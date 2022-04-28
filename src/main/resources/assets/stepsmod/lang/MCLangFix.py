@@ -20,7 +20,7 @@ linetostart = contents.index("  \"REPLACEME\":\"test\",\n")
 for line in contents:
     print(line)
 
-for v in darkVariants:
+for v in extraVariants:
     toinsert = "  \"block.stepsmod."+v+"_steps\": "
     name = "\""+v.title().replace("_"," ")
     toinsert = toinsert + name + " Steps\",\n"

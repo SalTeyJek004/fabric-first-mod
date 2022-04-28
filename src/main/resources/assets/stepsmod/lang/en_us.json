@@ -37,5 +37,20 @@
   "block.stepsmod.polished_deepslate_steps": "Polished Deepslate Steps",
   "block.stepsmod.cobbled_deepslate_steps": "Cobbled Deepslate Steps",
 
-  "itemGroup.stepsmod.steps": "SalTay's steps"
+  "block.stepsmod.endstone_brick_steps": "Endstone Brick Steps",
+  "block.stepsmod.dark_prismarine_steps": "Dark Prismarine Steps",
+  "block.stepsmod.prismarine_brick_steps": "Prismarine Brick Steps",
+  "block.stepsmod.prismarine_steps": "Prismarine Steps",
+  "block.stepsmod.smooth_quartz_steps": "Smooth Quartz Steps",
+  "block.stepsmod.quartz_steps": "Quartz Steps",
+  "block.stepsmod.smooth_red_sandstone_steps": "Smooth Red Sandstone Steps",
+  "block.stepsmod.red_sandstone_steps": "Red Sandstone Steps",
+  "block.stepsmod.smooth_sandstone_steps": "Smooth Sandstone Steps",
+  "block.stepsmod.sandstone_steps": "Sandstone Steps",
+  "block.stepsmod.red_nether_brick_steps": "Red Nether Brick Steps",
+  "block.stepsmod.nether_brick_steps": "Nether Brick Steps",
+  "block.stepsmod.brick_steps": "Brick Steps",
+  "block.stepsmod.purpur_steps": "Purpur Steps",
+
+  "itemGroup.stepsmod.steps": "SalTay's Steps"
 }

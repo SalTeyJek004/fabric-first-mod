@@ -1,0 +1,13 @@
+SalTay's steps mod
+
+Adds stair like step block to the game
+
+Credit to Classified39 for every:
+Block state,
+Block model,
+Recipe,
+Loot table,
+Item model,
+And other JSON files.
+
+I wrote the custom block classes though.

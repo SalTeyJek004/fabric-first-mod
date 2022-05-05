@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:red_nether_brick_steps"
+    "item": "stepsmod:red_nether_brick_steps",
+    "count": 12
   }
 }

@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:nether_brick_steps"
+    "item": "stepsmod:nether_brick_steps",
+    "count": 12
   }
 }

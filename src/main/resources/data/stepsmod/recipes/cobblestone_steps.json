@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:cobblestone_steps"
+    "item": "stepsmod:cobblestone_steps",
+    "count": 12
   }
 }

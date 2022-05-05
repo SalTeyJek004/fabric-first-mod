@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:spruce_steps"
+    "item": "stepsmod:spruce_steps",
+    "count": 12
   }
 }

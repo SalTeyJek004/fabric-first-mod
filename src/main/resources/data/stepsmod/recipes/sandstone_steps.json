@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:sandstone_steps"
+    "item": "stepsmod:sandstone_steps",
+    "count": 12
   }
 }

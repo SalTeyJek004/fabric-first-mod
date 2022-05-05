@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:oak_steps"
+    "item": "stepsmod:oak_steps",
+    "count": 12
   }
 }

@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:deepslate_tile_steps"
+    "item": "stepsmod:deepslate_tile_steps",
+    "count": 12
   }
 }

@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:mossy_cobblestone_steps"
+    "item": "stepsmod:mossy_cobblestone_steps",
+    "count": 12
   }
 }

@@ -2,6 +2,7 @@ package net.saltayjek004.stepsmod.block.custom;
 
 import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockHalf;
+import net.minecraft.block.enums.SlabType;
 import net.minecraft.block.enums.StairShape;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -9,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -34,7 +36,7 @@ import java.util.stream.IntStream;
 
 public class ModStepsBlock extends Block implements Waterloggable {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
-    public static final EnumProperty<BlockHalf> HALF = Properties.BLOCK_HALF;
+    public static final EnumProperty<SlabType> TYPE = Properties.SLAB_TYPE;
     public static final EnumProperty<StairShape> SHAPE = Properties.STAIR_SHAPE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     protected static final VoxelShape BOTTOM_NORTH_WEST_CORNER_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 8.0, 8.0);
@@ -74,14 +76,23 @@ public class ModStepsBlock extends Block implements Waterloggable {
 
     public ModStepsBlock(BlockState baseBlockState, AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(HALF, BlockHalf.BOTTOM)).with(SHAPE, StairShape.STRAIGHT)).with(WATERLOGGED, false));
+        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(TYPE, SlabType.BOTTOM)).with(SHAPE, StairShape.STRAIGHT)).with(WATERLOGGED, false));
         this.baseBlock = baseBlockState.getBlock();
         this.baseBlockState = baseBlockState;
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return (state.get(HALF) == BlockHalf.TOP ? TOP_SHAPES : BOTTOM_SHAPES)[SHAPE_INDICES[this.getShapeIndexIndex(state)]];
+        SlabType slabType = state.get(TYPE);
+        switch (slabType) {
+            case DOUBLE: {
+                return VoxelShapes.union(TOP_SHAPES[SHAPE_INDICES[this.getShapeIndexIndex(state)]], BOTTOM_SHAPES[SHAPE_INDICES[this.getShapeIndexIndex(state)]]);
+            }
+            case TOP: {
+                return TOP_SHAPES[SHAPE_INDICES[this.getShapeIndexIndex(state)]];
+            }
+        }
+        return BOTTOM_SHAPES[SHAPE_INDICES[this.getShapeIndexIndex(state)]];
     }
 
     private int getShapeIndexIndex(BlockState state) {
@@ -126,6 +137,24 @@ public class ModStepsBlock extends Block implements Waterloggable {
     }
 
     @Override
+    public boolean canReplace(BlockState state, ItemPlacementContext context) {
+        ItemStack itemStack = context.getStack();
+        SlabType slabType = state.get(TYPE);
+        if (slabType == SlabType.DOUBLE || !itemStack.isOf(this.asItem())) {
+            return false;
+        }
+        if (context.canReplaceExisting()) {
+            boolean bl = context.getHitPos().y - (double)context.getBlockPos().getY() > 0.5;
+            Direction direction = context.getSide();
+            if (slabType == SlabType.BOTTOM) {
+                return direction == Direction.UP || bl && direction.getAxis().isHorizontal();
+            }
+            return direction == Direction.DOWN || !bl && direction.getAxis().isHorizontal();
+        }
+        return true;
+    }
+
+    @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         this.baseBlock.onSteppedOn(world, pos, state, entity);
     }
@@ -159,10 +188,15 @@ public class ModStepsBlock extends Block implements Waterloggable {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         Direction direction = ctx.getSide();
         BlockPos blockPos = ctx.getBlockPos();
-        BlockState blockState = (BlockState)((BlockState)((BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing())).with(HALF, direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double)blockPos.getY() > 0.5 ? BlockHalf.TOP : BlockHalf.BOTTOM));
-        return (BlockState)blockState.with(SHAPE, ModStepsBlock.getStepShape(blockState, ctx.getWorld(), blockPos))
-                .with(WATERLOGGED,ctx.getWorld().getFluidState(ctx.getBlockPos()).getFluid() == Fluids.WATER);
+        FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
+        BlockState blockState = (BlockState)((BlockState)((BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing())).with(TYPE, direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double)blockPos.getY() > 0.5 ? SlabType.TOP : SlabType.BOTTOM)).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+        BlockState blockState2 = ctx.getWorld().getBlockState(blockPos);
+        if (blockState2.isOf(this)) {
+            return (BlockState)((BlockState)blockState.with(TYPE, SlabType.DOUBLE)).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+        }
+        return (BlockState)blockState.with(SHAPE, ModStepsBlock.getStepShape(blockState, ctx.getWorld(), blockPos));
     }
+
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
@@ -181,14 +215,14 @@ public class ModStepsBlock extends Block implements Waterloggable {
         Direction direction2;
         Direction direction = state.get(FACING);
         BlockState blockState = world.getBlockState(pos.offset(direction));
-        if (ModStepsBlock.isSteps(blockState) && state.get(HALF) == blockState.get(HALF) && (direction2 = blockState.get(FACING)).getAxis() != state.get(FACING).getAxis() && ModStepsBlock.isDifferentOrientation(state, world, pos, direction2.getOpposite())) {
+        if (ModStepsBlock.isSteps(blockState) && state.get(TYPE) == blockState.get(TYPE) && (direction2 = blockState.get(FACING)).getAxis() != state.get(FACING).getAxis() && ModStepsBlock.isDifferentOrientation(state, world, pos, direction2.getOpposite())) {
             if (direction2 == direction.rotateYCounterclockwise()) {
                 return StairShape.OUTER_LEFT;
             }
             return StairShape.OUTER_RIGHT;
         }
         BlockState blockState2 = world.getBlockState(pos.offset(direction.getOpposite()));
-        if (ModStepsBlock.isSteps(blockState2) && state.get(HALF) == blockState2.get(HALF) && (direction3 = blockState2.get(FACING)).getAxis() != state.get(FACING).getAxis() && ModStepsBlock.isDifferentOrientation(state, world, pos, direction3)) {
+        if (ModStepsBlock.isSteps(blockState2) && state.get(TYPE) == blockState2.get(TYPE) && (direction3 = blockState2.get(FACING)).getAxis() != state.get(FACING).getAxis() && ModStepsBlock.isDifferentOrientation(state, world, pos, direction3)) {
             if (direction3 == direction.rotateYCounterclockwise()) {
                 return StairShape.INNER_LEFT;
             }
@@ -199,7 +233,7 @@ public class ModStepsBlock extends Block implements Waterloggable {
 
     private static boolean isDifferentOrientation(BlockState state, BlockView world, BlockPos pos, Direction dir) {
         BlockState blockState = world.getBlockState(pos.offset(dir));
-        return !ModStepsBlock.isSteps(blockState) || blockState.get(FACING) != state.get(FACING) || blockState.get(HALF) != state.get(HALF);
+        return !ModStepsBlock.isSteps(blockState) || blockState.get(FACING) != state.get(FACING) || blockState.get(TYPE) != state.get(TYPE);
     }
 
     public static boolean isSteps(BlockState state) {
@@ -261,7 +295,7 @@ public class ModStepsBlock extends Block implements Waterloggable {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, HALF, SHAPE, WATERLOGGED);
+        builder.add(FACING, TYPE, SHAPE, WATERLOGGED);
     }
 
     @Override

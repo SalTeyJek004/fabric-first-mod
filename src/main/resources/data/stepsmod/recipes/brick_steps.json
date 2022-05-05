@@ -10,6 +10,7 @@
     }
   },
   "result": {
-    "item": "stepsmod:brick_steps"
+    "item": "stepsmod:brick_steps",
+    "count": 12
   }
 }

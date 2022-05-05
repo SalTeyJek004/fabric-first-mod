@@ -1,208 +1,328 @@
 {
   "variants": {
-    "facing=east,half=bottom,shape=inner_left": {
+    "facing=east,type=bottom,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "y": 270,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=inner_right": {
+    "facing=east,type=bottom,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner"
     },
-    "facing=east,half=bottom,shape=outer_left": {
+    "facing=east,type=bottom,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "y": 270,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=outer_right": {
+    "facing=east,type=bottom,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer"
     },
-    "facing=east,half=bottom,shape=straight": {
+    "facing=east,type=bottom,shape=straight": {
       "model": "stepsmod:block/quartz_steps"
     },
-    "facing=east,half=top,shape=inner_left": {
+    "facing=east,type=top,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=inner_right": {
+    "facing=east,type=top,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=top,shape=outer_left": {
+    "facing=east,type=top,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=outer_right": {
+    "facing=east,type=top,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=top,shape=straight": {
+    "facing=east,type=top,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_left": {
+    "facing=east,type=double,shape=inner_left": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=inner_right": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=outer_left": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=outer_right": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=straight": {
+      "model": "minecraft:block/quartz_slab",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=bottom,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_right": {
+    "facing=north,type=bottom,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_left": {
+    "facing=north,type=bottom,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "y": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_right": {
+    "facing=north,type=bottom,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=straight": {
+    "facing=north,type=bottom,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=top,shape=inner_left": {
+    "facing=north,type=top,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=top,shape=inner_right": {
+    "facing=north,type=top,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=top,shape=outer_left": {
+    "facing=north,type=top,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=top,shape=outer_right": {
+    "facing=north,type=top,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=top,shape=straight": {
+    "facing=north,type=top,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=inner_left": {
+    "facing=north,type=double,shape=inner_left": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=inner_right": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=outer_left": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=outer_right": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=straight": {
+      "model": "minecraft:block/quartz_slab",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=bottom,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner"
     },
-    "facing=south,half=bottom,shape=inner_right": {
+    "facing=south,type=bottom,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "y": 90,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=outer_left": {
+    "facing=south,type=bottom,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer"
     },
-    "facing=south,half=bottom,shape=outer_right": {
+    "facing=south,type=bottom,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "y": 90,
       "uvlock": true
     },
-    "facing=south,half=bottom,shape=straight": {
+    "facing=south,type=bottom,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "y": 90,
       "uvlock": true
     },
-    "facing=south,half=top,shape=inner_left": {
+    "facing=south,type=top,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=south,half=top,shape=inner_right": {
+    "facing=south,type=top,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=south,half=top,shape=outer_left": {
+    "facing=south,type=top,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=south,half=top,shape=outer_right": {
+    "facing=south,type=top,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=south,half=top,shape=straight": {
+    "facing=south,type=top,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=inner_left": {
+    "facing=south,type=double,shape=inner_left": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=inner_right": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=outer_left": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=outer_right": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=straight": {
+      "model": "minecraft:block/quartz_slab",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=bottom,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=inner_right": {
+    "facing=west,type=bottom,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=outer_left": {
+    "facing=west,type=bottom,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "y": 90,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=outer_right": {
+    "facing=west,type=bottom,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=bottom,shape=straight": {
+    "facing=west,type=bottom,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=top,shape=inner_left": {
+    "facing=west,type=top,shape=inner_left": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=top,shape=inner_right": {
+    "facing=west,type=top,shape=inner_right": {
       "model": "stepsmod:block/quartz_steps_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=west,half=top,shape=outer_left": {
+    "facing=west,type=top,shape=outer_left": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "y": 180,
       "uvlock": true
     },
-    "facing=west,half=top,shape=outer_right": {
+    "facing=west,type=top,shape=outer_right": {
       "model": "stepsmod:block/quartz_steps_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=west,half=top,shape=straight": {
+    "facing=west,type=top,shape=straight": {
       "model": "stepsmod:block/quartz_steps",
       "x": 180,
       "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=inner_left": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=inner_right": {
+      "model": "minecraft:block/quartz_stairs",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=outer_left": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=outer_right": {
+      "model": "stepsmod:block/quartz_steps",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=straight": {
+      "model": "minecraft:block/quartz_slab",
+      "y": 90,
+      "x": 90,
       "uvlock": true
     }
   }

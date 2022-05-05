@@ -1,208 +1,328 @@
 {
   "variants": {
-    "facing=east,half=bottom,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
+    "facing=east,type=bottom,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "y": 270,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner"
+    "facing=east,type=bottom,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner"
     },
-    "facing=east,half=bottom,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=east,type=bottom,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
       "y": 270,
       "uvlock": true
     },
-    "facing=east,half=bottom,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer"
+    "facing=east,type=bottom,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer"
     },
-    "facing=east,half=bottom,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps"
+    "facing=east,type=bottom,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps"
     },
-    "facing=east,half=top,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
+    "facing=east,type=top,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "x": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
+    "facing=east,type=top,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=top,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=east,type=top,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
       "x": 180,
       "uvlock": true
     },
-    "facing=east,half=top,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=east,type=top,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
       "x": 180,
       "y": 90,
       "uvlock": true
     },
-    "facing=east,half=top,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
+    "facing=east,type=top,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
       "x": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
+    "facing=east,type=double,shape=inner_left": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=inner_right": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=east,type=double,shape=straight": {
+      "model": "minecraft:block/weathered_cut_copper_slab",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=bottom,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "y": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
+    "facing=north,type=bottom,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=north,type=bottom,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
       "y": 180,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=north,type=bottom,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=bottom,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
+    "facing=north,type=bottom,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
       "y": 270,
       "uvlock": true
     },
-    "facing=north,half=top,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "x": 180,
-      "uvlock": true
-    },
-    "facing=north,half=top,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
-      "x": 180,
-      "y": 270,
-      "uvlock": true
-    },
-    "facing=south,half=bottom,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner"
-    },
-    "facing=south,half=bottom,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=bottom,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer"
-    },
-    "facing=south,half=bottom,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=bottom,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=south,half=top,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
-      "x": 180,
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "y": 90,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=west,half=bottom,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=west,half=top,shape=inner_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
-      "x": 180,
-      "y": 180,
-      "uvlock": true
-    },
-    "facing=west,half=top,shape=inner_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_inner",
+    "facing=north,type=top,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=west,half=top,shape=outer_left": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=north,type=top,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "x": 180,
-      "y": 180,
       "uvlock": true
     },
-    "facing=west,half=top,shape=outer_right": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps_outer",
+    "facing=north,type=top,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
       "x": 180,
       "y": 270,
       "uvlock": true
     },
-    "facing=west,half=top,shape=straight": {
-      "model": "stepsmod:block/waxed_weathered_cut_copper_steps",
+    "facing=north,type=top,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "x": 180,
+      "uvlock": true
+    },
+    "facing=north,type=top,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=inner_left": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=inner_right": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 270,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=north,type=double,shape=straight": {
+      "model": "minecraft:block/weathered_cut_copper_slab",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=bottom,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner"
+    },
+    "facing=south,type=bottom,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=bottom,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer"
+    },
+    "facing=south,type=bottom,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=bottom,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=top,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=top,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
       "x": 180,
       "y": 180,
+      "uvlock": true
+    },
+    "facing=south,type=top,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=top,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=south,type=top,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "x": 180,
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=inner_left": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=inner_right": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=south,type=double,shape=straight": {
+      "model": "minecraft:block/weathered_cut_copper_slab",
+      "y": 0,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=bottom,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,type=bottom,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=bottom,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=west,type=bottom,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=bottom,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=top,shape=inner_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=top,shape=inner_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_inner",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,type=top,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=top,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps_outer",
+      "x": 180,
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=west,type=top,shape=straight": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "x": 180,
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=inner_left": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=inner_right": {
+      "model": "minecraft:block/weathered_cut_copper_stairs",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=outer_left": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 90,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=outer_right": {
+      "model": "stepsmod:block/weathered_cut_copper_steps",
+      "y": 180,
+      "x": 90,
+      "uvlock": true
+    },
+    "facing=west,type=double,shape=straight": {
+      "model": "minecraft:block/weathered_cut_copper_slab",
+      "y": 90,
+      "x": 90,
       "uvlock": true
     }
   }

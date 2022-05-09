@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:polished_deepslate"
+  },
+  "result": "stepsmod:polished_deepslate_steps",
+  "count": 4
+}

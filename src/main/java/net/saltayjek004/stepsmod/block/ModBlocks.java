@@ -121,7 +121,7 @@ public class ModBlocks {
             new ModStepsBlock(Blocks.PRISMARINE_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.PRISMARINE_BRICKS)), ModItemGroup.STEPS);
     public static final Block DARK_PRISMARINE_STEPS = registerBlock("dark_prismarine_steps",
             new ModStepsBlock(Blocks.DARK_PRISMARINE.getDefaultState(), AbstractBlock.Settings.copy(Blocks.DARK_PRISMARINE)), ModItemGroup.STEPS);
-    public static final Block ENDSTONE_BRICK_STEPS = registerBlock("endstone_brick_steps",
+    public static final Block END_STONE_BRICK_STEPS = registerBlock("end_stone_brick_steps",
             new ModStepsBlock(Blocks.END_STONE_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.END_STONE_BRICKS)), ModItemGroup.STEPS);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:waxed_weathered_copper"
+  },
+  "result": "stepsmod:waxed_weathered_cut_copper_steps",
+  "count": 16
+}

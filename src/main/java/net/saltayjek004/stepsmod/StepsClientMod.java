@@ -53,7 +53,7 @@ public class StepsClientMod implements ClientModInitializer {
 
         //Misc Variants
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BRICK_STEPS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ENDSTONE_BRICK_STEPS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.END_STONE_BRICK_STEPS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PRISMARINE_STEPS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_PRISMARINE_STEPS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PRISMARINE_BRICK_STEPS, RenderLayer.getCutout());
